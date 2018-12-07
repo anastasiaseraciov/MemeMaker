@@ -1,18 +1,18 @@
-var canvasWidth = 500;
-var canvasHeight = 500;
-var newHeight = 500;
-var calcHeight = 500;
-var calcWidth = 500;
-var canvas = document.getElementById('mycanvas');
-var showcase = document.getElementById('showcase');
-var input1 = document.getElementById('top-line-text');
-var input4 = document.getElementById('bottom-line-text');
+let canvasWidth = 500;
+let canvasHeight = 500;
+let newHeight = 500;
+let calcHeight = 500;
+let calcWidth = 500;
+let canvas = document.getElementById('mycanvas');
+let showcase = document.getElementById('showcase');
+let input1 = document.getElementById('top-line-text');
+let input4 = document.getElementById('bottom-line-text');
 input1.disabled = true;
 input4.disabled = true;
 
 function textChangeListener(evt) {
-    var id = evt.target.id;
-    var text = evt.target.value;
+    let id = evt.target.id;
+    let text = evt.target.value;
 
     if (id == "top-line-text") {
         window.topLineOne = text;
@@ -25,8 +25,8 @@ function textChangeListener(evt) {
 
 function redrawMeme(image, topLineOneText, bottomLineTwoText) {
     // Get Canvas2DContext
-    var canvas = document.querySelector('canvas');
-    var ctx = canvas.getContext("2d");
+    let canvas = document.querySelector('canvas');
+    let ctx = canvas.getContext("2d");
     // Your code here
     // If canvas context is not equal to nothing then draw  a new image with attributed styles
     if (image != null)
@@ -58,15 +58,15 @@ function handleFileSelect(evt) {
     input1.disabled = false;
     input4.disabled = false;
     canvasHeight = newHeight;
-    var file = evt.target.files[0];
+    let file = evt.target.files[0];
 
 
-    var reader = new FileReader();
+    let reader = new FileReader();
     reader.onload = function (fileObject) {
-        var data = fileObject.target.result;
+        let data = fileObject.target.result;
 
         // Create an image object
-        var image = new Image();
+        let image = new Image();
         image.onload = function () {
 
             calcHeight = this.height;
@@ -94,8 +94,8 @@ document.getElementById('file').addEventListener('change', handleFileSelect, fal
 
 //Fix bug with open file in a new window and possibility to be saved
 window.onload = function saveFile() {
-        var canvas = document.querySelector('canvas');
-        var button = document.getElementById('btn-download');
+        const canvas = document.querySelector('canvas');
+        let button = document.getElementById('btn-download');
         button.addEventListener('click', function () {
             window.open(canvas.toDataURL("image/png"), '_blank');
         });
