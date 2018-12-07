@@ -27,7 +27,8 @@ Follow this link -> :point_right: <https://anastasiaseraciov.github.io/MemeMaker
 
 ## Interface Design
 
-All application components are usable across modern desktop, tablet, and phone browsers. It is tested and running well at the latest Chrome, Firefox and Safari browser (November 2018).
+All application components are responsive and usable across modern desktop, tablet, and phone browsers. It is tested and running well at the latest Chrome, Firefox and Safari browser (November 2018). Open canvas image in a new tab works well in Firefox but not in Chrome or Safari. 
+Made use of Fontawesome icons
 
 ## Documentation
 
