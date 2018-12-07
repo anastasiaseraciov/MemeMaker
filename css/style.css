@@ -1,2 +1,59 @@
-#image-container {
+html {
+    text-align: center;
     display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles for the canvas image */
+
+canvas {
+    display: none;
+    margin: 0 16px, 16px, 16px;
+}
+
+/* Styles for the upload image icon*/
+
+.image-upload>input {
+    display: none;
+}
+
+.image-upload i {
+    cursor: pointer;
+    font-size: 40px;
+    color: lightseagreen;
+}
+
+i:hover {
+    color: blue;
+}
+
+/* Styles for the second h3 */
+h3:nth-of-type(2) {
+    margin-bottom: 0px;
+}
+
+/* Styles for the text input fields */
+
+input {
+    display: inline-flex;
+    margin-top: 1em;
+}
+
+#text-fields-container {
+    padding: 1em;
+}
+
+/* Styles for the Media Queries */
+
+@media screen and (max-width: 480px) {
+    body,
+    img,
+    canvas {
+        width: 100%;
+    }
+}
